@@ -1,0 +1,75 @@
+* {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+h1 {
+  margin: 25px;
+}
+.main-cube {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.main-cube div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 400%;
+}
+
+.main-cube .A {
+  border-bottom: 3px solid rgb(0, 0, 0);
+  border-right: 3px solid rgb(0, 0, 0);
+}
+.main-cube .B {
+  border-bottom: 3px solid rgb(0, 0, 0);
+}
+.main-cube .C {
+  border-bottom: 3px solid rgb(0, 0, 0);
+  border-left: 3px solid rgb(0, 0, 0);
+}
+.main-cube .D {
+  border-right: 3px solid rgb(0, 0, 0);
+}
+.main-cube .F {
+  border-left: 3px solid rgb(0, 0, 0);
+}
+.main-cube .G {
+  border-right: 3px solid rgb(0, 0, 0);
+  border-top: 3px solid rgb(0, 0, 0);
+}
+.main-cube .H {
+  border-top: 3px solid rgb(0, 0, 0);
+}
+.main-cube .J {
+  border-left: 3px solid rgb(0, 0, 0);
+  border-top: 3px solid rgb(0, 0, 0);
+}
+
+.end-game {
+  font-size: 200%;
+}
+.end-game>*{
+    margin: 20px;
+}
+.new-game {
+  text-decoration: none;
+  padding: 3px;
+  color: inherit;
+  margin: 20% auto;
+  font-size: xx-large;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 0.2cm;
+  width: max-content;
+  cursor: pointer;
+}
