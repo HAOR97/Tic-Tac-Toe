@@ -1,11 +1,15 @@
-const cubes = document.querySelectorAll(".main-cube div");
-const Player1 = [];
-const Player2 = [];
+let cubes = document.querySelectorAll(".main-cube div");
+let Player1 = [];
+let Player2 = [];
 let caracter = "X";
 let counter = 0;
+let end = false;
+
 cubes.forEach((cube) => {
   cube.addEventListener("click", (a) => {
-    if (!(cube.innerHTML == "")) {
+    if (end) {
+      console.log("gotova je igra")
+    } else if (!(cube.innerHTML == "")) {
       console.log("vec je neko tu igrao");
     } else {
       cube.innerHTML = caracter;
@@ -25,6 +29,7 @@ cubes.forEach((cube) => {
         const endGame = document.querySelector(".end-game");
 
         winnerText.innerHTML = "Tied Game";
+        end = true;
         endGame.hidden = false;
         newGame.addEventListener("click", () => {
           location.replace(location.href);
@@ -51,12 +56,31 @@ function checkWin(array, caracter) {
   ) {
     if (caracter == "X") {
       winnerText.innerHTML = "Player 1 Win";
+      end = true;
     } else {
       winnerText.innerHTML = "Player 2 Win";
+      end = true;
     }
     endGame.hidden = false;
     newGame.addEventListener("click", () => {
-      location.replace(location.href);
+      //location.replace(location.href);
+
+      reset(endGame);
     });
   }
+}
+
+
+function reset(endGame) {
+  Player1 = [];
+  Player2 = [];
+  caracter = "X";
+  counter = 0;
+  end = false;
+  cubes = document.querySelectorAll(".main-cube div");
+
+  cubes.forEach((cell) => {
+    cell.innerHTML = "";
+  });
+  endGame.hidden = true;
 }

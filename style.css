@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 .container {
   width: 80%;
   margin: 10px auto;
@@ -14,17 +15,20 @@ h1 {
   margin: 25px;
 }
 .main-cube {
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   margin: 50px auto;
   display: grid;
   grid-template-columns: auto auto auto;
 }
 .main-cube div {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  font-size: 400%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 400%;
 }
 
 .main-cube .A {
@@ -55,12 +59,11 @@ h1 {
   border-left: 3px solid rgb(0, 0, 0);
   border-top: 3px solid rgb(0, 0, 0);
 }
-
 .end-game {
   font-size: 200%;
 }
-.end-game>*{
-    margin: 20px;
+.end-game > * {
+  margin: 20px;
 }
 .new-game {
   text-decoration: none;
@@ -72,4 +75,22 @@ h1 {
   border-radius: 0.2cm;
   width: max-content;
   cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .main-cube {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .main-cube div {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    font-size: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
